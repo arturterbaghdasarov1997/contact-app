@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "app/(tabs)/indexjs", "app/(tabs)/ContactsList.js"  ]
 }
