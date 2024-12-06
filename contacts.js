@@ -230,7 +230,7 @@ const createContact = () => ({
 });
 
 export const compareNames = (contact1, contact2) =>
-    contact1.name.localeCompare(contact2.name);
+  contact1.name.localeCompare(contact2.name);
 
 const contacts = Array.from({ length: NUM_CONTACTS }, createContact);
 

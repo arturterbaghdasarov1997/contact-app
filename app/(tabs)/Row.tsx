@@ -18,14 +18,14 @@ const Row: React.FC<RowProps> = ({ name, phone }) => {
 const styles = StyleSheet.create({
   row: {
     margin: 20,
-    width: '80%',
+    width: "80%",
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: "#ccc",
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: 'blue',
-    alignSelf: 'center',
+    borderColor: "blue",
+    alignSelf: "center",
   },
   name: {
     fontSize: 18,
