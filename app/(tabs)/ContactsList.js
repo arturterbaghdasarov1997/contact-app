@@ -2,25 +2,20 @@ import React from "react";
 import { SectionList, Text, StyleSheet, View } from "react-native";
 import Row from "./Row";
 
-const renderItem = ({ item }) => (
-  <Row name={item.name} phone={item.phone} />
-);
+const renderItem = ({ item }) => <Row name={item.name} phone={item.phone} />;
 
 const renderSectionHeader = ({ section }) => (
   <Text style={styles.sectionHeader}>{section.title}</Text>
 );
 
 const ContactsList = ({ contacts }) => {
-  const contactsByLetters = contacts.reduce(
-    (obj, contact) => {
-      const firstLetter = contact.name[0].toUpperCase();
-      return {
-        ...obj,
-        [firstLetter]: [...(obj[firstLetter] || []), contact],
-      };
-    },
-    {}
-  );
+  const contactsByLetters = contacts.reduce((obj, contact) => {
+    const firstLetter = contact.name[0].toUpperCase();
+    return {
+      ...obj,
+      [firstLetter]: [...(obj[firstLetter] || []), contact],
+    };
+  }, {});
 
   const sections = Object.keys(contactsByLetters)
     .sort()
